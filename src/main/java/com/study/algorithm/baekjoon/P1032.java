@@ -14,7 +14,6 @@ public class P1032 {
             dirs[i] = sc.next();
         }
 
-
         for (int i = 0; i < dirs[0].length(); i++) {
 
             boolean diff = false;
