@@ -1,4 +1,4 @@
-package com.study.algorithm.baekjoon;
+package com.study.algorithm.baekjoon.success;
 
 import java.io.*;
 
