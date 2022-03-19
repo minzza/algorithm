@@ -1,23 +1,26 @@
-package com.study.algorithm.baekjoon.success;
+package com.study.algorithm.baekjoon.greedy;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class P2750 {
+public class P2752 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int[] array = new int[N];
+        int array[] = new int[3];
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = Integer.parseInt(br.readLine());
+        int x = 0;
+        while (st.hasMoreTokens()) {
+            array[x] = Integer.parseInt(st.nextToken());
+            x++;
         }
 
-        int index = 0, temp = 0;
+        int temp = 0;
+        int index = 0;
         for (int i = 0; i < array.length; i++) {
-            int min = 10000;
-
+            int min = 1000001;
             for (int j = i; j < array.length; j++) {
                 if (min > array[j]) {
                     min = array[j];
@@ -27,10 +30,6 @@ public class P2750 {
             temp = array[i];
             array[i] = array[index];
             array[index] = temp;
-        }
-
-        for (int x : array) {
-            System.out.println(x);
         }
     }
 }
